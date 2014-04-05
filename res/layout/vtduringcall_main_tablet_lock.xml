@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/mainLayout" android:layout_width="768.0dip" android:layout_height="465.0dip" android:layout_marginLeft="256.0dip" android:layout_marginTop="155.0dip">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:id="@id/inCallIconActionBarContainer" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentTop="true">
+                    <FrameLayout android:orientation="horizontal" android:id="@id/callsate_container" android:background="#ff5b7900" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true">
+                        <TextView android:textSize="30.0dip" android:textColor="#ffffffff" android:layout_gravity="left|center" android:id="@id/call_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:singleLine="true" android:includeFontPadding="false" />
+                        <ImageView android:layout_gravity="right" android:id="@id/videoCallBarDivider" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_marginRight="64.0dip" android:src="@drawable/video_call_bar_divider" />
+                        <ImageButton android:gravity="center" android:layout_gravity="right" android:id="@id/actionbar_bottom_icon_menu" android:background="#00000000" android:layout_width="56.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:src="@drawable/video_call_more_small" />
+                        <com.android.phone.PreviewEffectUI android:id="@id/previewEffectUI" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    </FrameLayout>
+                </LinearLayout>
+                <RelativeLayout android:orientation="horizontal" android:background="#ffe3e3e3" android:layout_width="fill_parent" android:layout_height="145.0dip" android:layout_below="@id/inCallIconActionBarContainer">
+                    <LinearLayout android:id="@id/callerInfoLayout" android:paddingLeft="23.0dip" android:layout_width="614.0dip" android:layout_height="145.0dip">
+                        <LinearLayout android:orientation="vertical" android:id="@id/caller_info_container" android:layout_width="582.0dip" android:layout_height="81.0dip" android:layout_marginTop="16.0dip">
+                            <TextView android:textSize="48.0dip" android:textColor="#ff000000" android:id="@id/caller_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+                            <TextView android:textSize="27.0dip" android:textColor="#ff717171" android:id="@id/caller_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/inCallButtonContainer" android:layout_width="154.0dip" android:layout_height="fill_parent" android:layout_marginTop="9.0dip" android:layout_below="@id/inCallIconActionBarContainer" android:layout_alignParentRight="true">
+                        <Button android:layout_gravity="left" android:id="@id/switch_camera" android:background="@drawable/video_call_during_btn_swich_camera_small" android:layout_width="90.0dip" android:layout_height="90.0dip" />
+                        <FrameLayout android:id="@id/volume_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageButton android:layout_gravity="right" android:id="@id/volume_button" android:background="@drawable/video_call_during_btn_volume_small" android:layout_width="90.0dip" android:layout_height="90.0dip" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <FrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="264.0dip" android:layout_alignParentBottom="true">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:layout_width="323.0dip" android:layout_height="264.0dip">
+                            <TextureView android:id="@id/far_end" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                            <LinearLayout android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <ImageView android:layout_gravity="center" android:id="@id/image_swipe_animation_farend" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+                            </LinearLayout>
+                            <ImageView android:id="@id/far_end_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/call_img_unknown_01" />
+                            <ImageView android:id="@id/image_white_switch_camera_animation_swiped" android:background="@*android:color/white" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                            <ImageView android:id="@id/image_capture_animation_far_end" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                            <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/videoRecordTimeLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="19.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="3.0dip">
+                                <ImageView android:id="@id/record_far_end" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/call_recording_icon_n" />
+                                <TextView android:textSize="14.0dip" android:typeface="normal" android:textColor="#ffd81818" android:id="@id/text_view_video_record_time" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginTop="-1.0dip" android:text="@string/record_timer" android:shadowColor="#7f000000" android:shadowDy="1.0" android:shadowRadius="1.5" />
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <ImageView android:gravity="center" android:id="@id/ConnectBigImageView" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="54.0dip" android:layout_centerHorizontal="true" />
+                                    <TextView android:gravity="center" android:id="@id/PrepareOtherVideoText" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/prepareOtherVideo" android:singleLine="true" android:layout_centerHorizontal="true" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                        <FrameLayout android:layout_width="323.0dip" android:layout_height="264.0dip">
+                            <LinearLayout android:id="@id/farEndLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                    <TextureView android:id="@id/near_end" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                                    <LinearLayout android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                        <ImageView android:layout_gravity="center" android:id="@id/image_swipe_animation_nearend" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+                                    </LinearLayout>
+                                    <ImageView android:id="@id/near_end_image" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/call_img_unknown_01" />
+                                    <LinearLayout android:id="@id/videoRecordTimeLayoutNearEnd" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="19.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="4.0dip">
+                                        <ImageView android:id="@id/record_near_end" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/call_recording_icon_n" />
+                                        <TextView android:textSize="14.0dip" android:textColor="#ffd81818" android:id="@id/text_view_video_record_time_near_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="-1.0dip" android:text="@string/record_timer" android:shadowColor="#7f000000" android:shadowDy="1.0" android:shadowRadius="1.5" />
+                                    </LinearLayout>
+                                    <ImageView android:id="@id/image_capture_animation_near_end" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                                    <ImageView android:layout_gravity="center" android:id="@id/image_white_switch_camera_animation" android:background="@*android:color/white" android:visibility="invisible" android:layout_width="74.0dip" android:layout_height="91.0dip" />
+                                </FrameLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                        <FrameLayout android:layout_width="122.0dip" android:layout_height="264.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                            <ToggleButton android:textSize="22.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="top|right|center" android:id="@id/mute" android:background="@drawable/video_call_button_bg" android:paddingTop="11.0dip" android:paddingBottom="13.0dip" android:layout_width="121.0dip" android:layout_height="130.0dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:textOn="@string/onscreenMuteText" android:textOff="@string/onscreenMuteText" android:drawableTop="@drawable/video_call_during_mute_small" android:drawableBottom="@drawable/videocall_toggle_button" android:drawablePadding="-9.0dip" />
+                            <Button android:textSize="21.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom|right|center" android:id="@id/endcall" android:background="@drawable/video_end_call_button_bg" android:paddingTop="12.0dip" android:layout_width="121.0dip" android:layout_height="76.0dip" android:layout_marginLeft="2.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:text="@string/end_call" android:drawableTop="@drawable/video_call_during_end_call_small" android:drawablePadding="-9.0dip" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <RelativeLayout android:id="@id/farEndArea" android:layout_width="323.0dip" android:layout_height="264.0dip" android:layout_alignParentBottom="true">
+                    <RelativeLayout android:id="@id/farEndButtonContainer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+                        <LinearLayout android:orientation="horizontal" android:id="@id/captureRecordBtn" android:layout_width="323.0dip" android:layout_height="43.0dip" android:layout_marginBottom="3.0dip" android:layout_alignParentBottom="true">
+                            <Button android:textSize="20.0sp" android:textColor="#bfffffff" android:gravity="center" android:id="@id/captureBtn" android:background="@drawable/video_call_during_btn_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:text="@string/capture" android:layout_weight="1.0" />
+                            <Button android:textSize="20.0sp" android:textColor="#bfffffff" android:gravity="center" android:id="@id/recordBtn" android:background="@drawable/video_call_during_btn_bg" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:text="@string/rec_video" android:layout_weight="1.0" />
+                            <Button android:textSize="20.0sp" android:textColor="#bfffffff" android:gravity="center" android:id="@id/recordStopBtn" android:background="@drawable/video_call_during_btn_bg" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:text="@string/rec_video" android:layout_weight="1.0" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/nearEndArea" android:layout_width="323.0dip" android:layout_height="264.0dip" android:layout_toRightOf="@id/farEndArea" android:layout_alignParentBottom="true">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/nearEndBottomButtons" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layout_marginBottom="3.0dip" android:layout_alignParentBottom="true">
+                        <Button android:textSize="20.0sp" android:textColor="#bfffffff" android:gravity="center" android:id="@id/hide" android:background="@drawable/video_call_during_btn_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:text="@string/hide" android:layout_weight="1.0" />
+                        <Button android:textSize="20.0sp" android:textColor="#bfffffff" android:gravity="center" android:id="@id/outgoingImage" android:background="@drawable/video_call_during_btn_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:text="@string/out_img" android:layout_weight="1.0" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/dtmfDialerLayout" android:background="#ffdcdcdc" android:paddingLeft="40.0dip" android:paddingRight="42.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip">
+                    <EditText android:textSize="37.0dip" android:textColor="@color/dtmf_dialer_display_text" android:ellipsize="start" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/dtmfDialerField" android:background="@drawable/APKTOOL_DUMMY_02f7" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="388.0dip" android:layout_height="55.0dip" android:cursorVisible="false" android:maxLines="1" android:scrollHorizontally="true" android:singleLine="true" />
+                    <include layout="@layout/non_drawer_dialpad_vt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:paddingLeft="39.0dip" android:paddingRight="39.0dip" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginBottom="18.0dip">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="89.0dip">
+                        <FrameLayout android:layout_width="133.0dip" android:layout_height="fill_parent" android:layout_marginRight="1.0dip" android:layout_weight="1.0">
+                            <Button android:id="@id/dialpad" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/keypad" android:shadowColor="@*android:color/white" android:shadowDy="1.0" android:shadowRadius="1.0" android:drawableTop="@drawable/videocall_keypad_button" style="@style/InCallTouchUpperButton" />
+                            <Button android:id="@id/hide_dialpad" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/onscreenHideDialpadText" android:shadowColor="@*android:color/white" android:shadowDy="1.0" android:shadowRadius="1.0" android:drawableTop="@drawable/videocall_hide_button" style="@style/InCallTouchUpperButton" />
+                        </FrameLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="149.0dip">
+                        <ToggleButton android:id="@id/speaker" android:layout_width="222.0dip" android:layout_height="fill_parent" android:layout_marginRight="2.0dip" android:textOn="@string/onscreenSpeakerText" android:textOff="@string/onscreenSpeakerText" android:shadowColor="@*android:color/white" android:shadowDy="1.0" android:shadowRadius="1.0" android:drawableTop="@drawable/APKTOOL_DUMMY_0649" android:layout_weight="1.0" style="@style/InCallTouchToggleButtonNoFrame" />
+                        <Button android:layout_width="222.0dip" android:layout_height="fill_parent" android:layout_marginRight="2.0dip" android:text="@string/hide" android:drawableTop="@drawable/hide_show" android:layout_weight="1.0" style="@style/InCallTouchUpperButton" />
+                        <ToggleButton android:id="@id/headset" android:layout_width="222.0dip" android:layout_height="fill_parent" android:textOn="@string/headset" android:textOff="@string/headset" android:shadowColor="@*android:color/white" android:shadowDy="1.0" android:shadowRadius="1.0" android:drawableTop="@drawable/APKTOOL_DUMMY_0447" android:layout_weight="1.0" style="@style/InCallTouchToggleButtonNoFrame" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="right" android:orientation="vertical" android:id="@id/volume_panel_layout" android:background="@drawable/call_volume_bg" android:visibility="invisible" android:layout_width="46.0dip" android:layout_height="223.0dip" android:layout_marginTop="144.0dip" android:layout_marginRight="21.0dip" android:layout_below="@id/volume_button">
+                <com.sec.android.touchwiz.widget.TwSeekBar android:id="@id/volume_seekbar" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/volume_seekbar" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

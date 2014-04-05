@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/manageConferencePanel" android:background="@color/incall_screen_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Chronometer android:textAppearance="?android:textAppearanceLarge" android:textSize="24.0dip" android:gravity="center_horizontal" android:id="@id/manageConferencePanelHeader" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentTop="true" />
+    <ImageView android:id="@id/manageConferencePanelDivider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@*android:drawable/divider_horizontal_dark" android:scaleType="fitXY" android:layout_below="@id/manageConferencePanelHeader" />
+    <LinearLayout android:orientation="vertical" android:id="@id/manageConferenceHeader" android:visibility="gone" style="@style/manageConferenceHeaderStyle">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_launcher_phone" />
+            <TextView android:textSize="18.0dip" android:textStyle="normal" android:textColor="@color/APKTOOL_DUMMY_0074" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/manageConferenceLabel" />
+        </LinearLayout>
+        <View android:background="@drawable/APKTOOL_DUMMY_06f7" android:layout_width="fill_parent" android:layout_height="1.5dip" />
+    </LinearLayout>
+    <ScrollView android:id="@id/conferenceList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_below="@id/manageConferenceHeader">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/caller0" layout="@layout/caller_in_conference_full" />
+            <include android:id="@id/caller1" layout="@layout/caller_in_conference_full" />
+            <include android:id="@id/caller2" layout="@layout/caller_in_conference_full" />
+            <include android:id="@id/caller3" layout="@layout/caller_in_conference_full" />
+            <include android:id="@id/caller4" layout="@layout/caller_in_conference_full" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:textColor="@color/incall_button_text" android:id="@id/manage_done" android:visibility="gone" android:text="@string/caller_manage_manage_done_text" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@style/BackToCallButton" />
+</RelativeLayout>

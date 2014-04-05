@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="call_state_label_margin">356.0dip</dimen>
+    <dimen name="in_call_buttons_height">234.0dip</dimen>
+    <dimen name="in_call_upper_buttons_height">95.0dip</dimen>
+    <dimen name="in_call_toggle_buttons_height">102.0dip</dimen>
+    <dimen name="call_state_lable_height">27.0dip</dimen>
+    <dimen name="in_call_buttons_padding_bottom">10.0dip</dimen>
+    <dimen name="in_call_buttons_padding_top">16.0dip</dimen>
+    <dimen name="in_call_buttons_padding_left">10.0dip</dimen>
+    <dimen name="in_call_buttons_padding_right">10.0dip</dimen>
+    <dimen name="in_call_upper_buttons_margin_bottom">4.5dip</dimen>
+    <dimen name="in_call_upper_buttons_margin_top">4.5dip</dimen>
+    <dimen name="in_call_upper_buttons_margin_right">9.0dip</dimen>
+    <dimen name="in_call_toggle_buttons_margin_right">9.0dip</dimen>
+    <dimen name="in_vtcall_land_buttons_width">193.0dip</dimen>
+    <dimen name="mw_app_defaultsize_w">640.0dip</dimen>
+    <dimen name="mw_app_defaultsize_h">138.0dip</dimen>
+    <dimen name="mw_app_minimumsize_w">640.0dip</dimen>
+    <dimen name="mw_app_minimumsize_h">128.0dip</dimen>
+    <dimen name="mw_layout_top_margin">222.0dip</dimen>
+    <dimen name="mw_call_info_h">125.0dip</dimen>
+    <dimen name="vt_button_padding_top_easymode">35.0dip</dimen>
+    <dimen name="in_call_button_container_width">284.0dip</dimen>
+    <dimen name="call_info_1_photo_width">356.0dip</dimen>
+    <dimen name="mw_call_button_margin_top_l">12.0dip</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/RejectVtWithMsgItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUMMY_021f" android:layout_marginLeft="@dimen/APKTOOL_DUMMY_021d" android:layout_marginRight="@dimen/APKTOOL_DUMMY_021e">
+        <TextView android:id="@id/reject_call_with_msg_item_text" style="@style/RejectVtWithMsgItemText" />
+        <Button android:id="@id/reject_call_with_msg_item_button" style="@style/RejectVtWithMsgItemBtn" />
+    </LinearLayout>
+    <ImageView android:background="@drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

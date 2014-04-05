@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/conferenceCallerSeparate" android:background="@drawable/conference_call_button" android:layout_width="49.0dip" android:layout_height="46.0dip" android:layout_marginLeft="@dimen/APKTOOL_DUMMY_026e" android:src="@drawable/call_popup_ic_split_full" android:scaleType="center" android:contentDescription="@string/goPrivate" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/APKTOOL_DUMMY_026f" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/conferenceCallerImage" android:background="@*android:color/black" android:padding="1.0dip" android:layout_width="68.0dip" android:layout_height="68.0dip" android:src="@drawable/call_img_unknown3_2" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/manage_conference_secondary_text_color" android:ellipsize="marquee" android:gravity="left" android:id="@id/conferenceCallerNumberType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textAllCaps="true" />
+            <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/APKTOOL_DUMMY_026f" android:layout_weight="1.0">
+                <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="20.0dip" android:textColor="@color/incall_button_text" android:layout_gravity="center_vertical" android:id="@id/conferenceCallerName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="20.0dip" android:textColor="@color/incall_button_text" android:layout_gravity="center_vertical" android:id="@id/conferenceCallerNumber" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+        <Button android:textSize="20.0dip" android:textStyle="normal" android:textColor="@color/APKTOOL_DUMMY_0073" android:ellipsize="marquee" android:gravity="center" android:id="@id/conferenceCallerDisconnect" android:background="@drawable/APKTOOL_DUMMY_0356" android:paddingLeft="1.0dip" android:paddingTop="0.0dip" android:paddingRight="1.0dip" android:paddingBottom="0.0dip" android:layout_width="74.0dip" android:layout_height="46.0dip" android:layout_marginLeft="14.0dip" android:layout_marginRight="8.0dip" android:scaleType="center" android:text="@string/onscreenEndCallText" android:singleLine="true" android:contentDescription="@string/onscreenEndCallText" />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_06f7" android:scaleType="fitXY" />
+</LinearLayout>

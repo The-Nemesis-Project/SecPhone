@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/mainLayout" android:layout_width="768.0dip" android:layout_height="465.0dip" android:layout_marginLeft="256.0dip" android:layout_marginTop="155.0dip">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/callsate_container" android:background="@color/invtcall_call_state_incoming_bg" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentTop="true">
+                    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="30.0dip" android:textColor="@color/incall_videocall_tablet_call_state_label_text_color" android:gravity="left|center" android:id="@id/vtcall_state" android:paddingLeft="24.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/card_title_incoming_call" android:singleLine="true" android:layout_weight="1.0" />
+                </LinearLayout>
+                <RelativeLayout android:id="@id/primary_call_banner" android:background="@color/incall_videocall_tablet_banner_background" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="145.0dip" android:minHeight="48.0dip" android:layout_below="@id/callsate_container">
+                    <ImageView android:gravity="top|center" android:id="@id/incoming_contact_image" android:background="@drawable/call_bg" android:layout_width="103.0dip" android:layout_height="103.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/call_incoming_call_idcard" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+                    <RelativeLayout android:id="@id/caller_info_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/incoming_contact_image">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="30.0dip" android:textColor="@color/incall_videocall_tablet_banner_text_color" android:id="@id/caller_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="570.0dip" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                        <RelativeLayout android:orientation="horizontal" android:id="@id/labelAndNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/callTypeIcon" android:layout_below="@id/name">
+                            <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="27.0dip" android:textColor="@color/incall_videocall_tablet_banner_2nd_text_color" android:id="@id/caller_num" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="360.0dip" android:singleLine="true" />
+                            <TextView android:textSize="18.0dip" android:textColor="@color/videocall_text" android:id="@id/cdnipNumber" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <TextView android:textSize="13.0dip" android:textColor="@color/videocall_text" android:id="@id/caller_city" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="27.0dip" android:textColor="@color/incall_videocall_tablet_banner_2nd_text_color" android:id="@id/label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:singleLine="true" android:layout_toRightOf="@id/phoneNumber" />
+                        </RelativeLayout>
+                        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/incall_call_banner_text_color" android:ellipsize="end" android:id="@id/callTypeLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/labelAndNumber" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/video_container" android:background="@color/incall_videocall_tablet_banner_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/primary_call_banner">
+                    <FrameLayout android:id="@id/incomingSurfaceLayoutTemplate" android:layout_width="268.0dip" android:layout_height="224.0dip" android:layout_marginLeft="247.0dip" android:layout_marginBottom="69.0dip">
+                        <TextureView android:id="@id/near_end" android:background="@*android:color/black" android:layout_width="268.0dip" android:layout_height="234.0dip" />
+                        <Button android:textSize="20.0sp" android:textStyle="normal" android:textColor="#ffffffff" android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/hide_button_incoming_screen" android:background="@drawable/video_call_during_btn_bg" android:visibility="gone" android:layout_width="268.0dip" android:layout_height="43.0dip" android:layout_marginLeft="3.0dip" android:text="@string/hide" android:singleLine="true" android:soundEffectsEnabled="false" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <ViewStub android:id="@id/social_status_stub" android:layout="@layout/APKTOOL_DUMMY_00e2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/videoCall_Fallback" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+                <Button android:textSize="16.0dip" android:textColor="@color/tw_color001" android:gravity="center" android:layout_gravity="bottom" android:id="@id/accept_by_voice_call_button" android:background="@drawable/green_button" android:layout_width="153.0dip" android:layout_height="42.0dip" android:layout_marginLeft="21.0dip" android:layout_marginBottom="18.0dip" android:text="@string/accept_by_voice_call" android:singleLine="true" />
+                <Button android:textSize="16.0dip" android:textColor="@color/tw_color001" android:gravity="center" android:layout_gravity="bottom" android:id="@id/rej_msg_button" android:background="@drawable/red_button" android:layout_width="153.0dip" android:layout_height="42.0dip" android:layout_marginLeft="266.0dip" android:layout_marginBottom="18.0dip" android:text="@string/reject_with_message" android:singleLine="true" />
+            </LinearLayout>
+            <com.android.phone.IncomingCallWidget android:id="@id/incomingCallWidgetForVT" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/reject_call_with_msg_sliding_drawer" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>
