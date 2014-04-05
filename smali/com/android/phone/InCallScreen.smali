@@ -13722,14 +13722,14 @@
 
     .line 5969
     :pswitch_0
-    const/16 v1, 0x1194
+    const/16 v1, 0x0
 
     .line 5970
     goto :goto_15
 
     .line 5972
     :pswitch_1
-    const/16 v1, 0x1194
+    const/16 v1, 0x0
 
     .line 5973
     goto :goto_15
@@ -13751,7 +13751,7 @@
 
     .line 5978
     :cond_65
-    const/16 v1, 0x1194
+    const/16 v1, 0x0
 
     .line 5980
     goto :goto_15

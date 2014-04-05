@@ -400,8 +400,6 @@
 
     iget-object v1, v1, Lcom/android/phone/Ringer;->mAudioManager:Landroid/media/AudioManager;
 
-    invoke-virtual {v1, v6, v2, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
-
     .line 860
     const-wide/16 v1, 0x7d0
 
@@ -834,6 +832,8 @@
     goto/16 :goto_0
 
     .line 789
+    nop
+
     nop
 
     :pswitch_data_0
